@@ -1,0 +1,14 @@
+1 -
+2 -
+
+3 - upload photo from libray, ok
+  - get photo from camera, ok
+  - confirmation box to replace background, ok
+
+4 -
+5 - manage cloth slot, ok
+  - click cloth button to show cloth slot, ok
+6 -
+
+Dai's way
+1 - one touch show/hide all ui elements

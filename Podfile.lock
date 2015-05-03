@@ -1,0 +1,16 @@
+PODS:
+  - MaterialKit (0.3.2)
+  - pop (1.0.7)
+  - VBFPopFlatButton (0.0.6):
+    - pop
+
+DEPENDENCIES:
+  - MaterialKit
+  - VBFPopFlatButton
+
+SPEC CHECKSUMS:
+  MaterialKit: dba786a24f5e5cdeb638000b899b05042dafa41c
+  pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
+  VBFPopFlatButton: 782344da63f104c279a857d806e065117a7e1196
+
+COCOAPODS: 0.36.4
