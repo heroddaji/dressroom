@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import "3rdparylibs/ct_poput_menu/DressRoom-Bridging-Header.h"
 
-class UserViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+
+class UserViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, AKPickerViewDataSource, AKPickerViewDelegate {
     
     var users = [User]()
     var me = User(name: "me"){
@@ -18,6 +18,10 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
         }
     }
     
+    let profileCount = 5
+    let backgroundCount = 4
+    let clothCount = 12
+    
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var clothSlot1: UIImageView!
     @IBOutlet weak var clothSlot2: UIImageView!
@@ -25,18 +29,56 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
     @IBOutlet weak var clothSlot4: UIImageView!
     @IBOutlet weak var clothSlot5: UIImageView!
     @IBOutlet weak var clothSlot6: UIImageView!
-
-    @IBAction func conversationMenuBtnClicked(sender: UIButton) {
-        let items = [1,2,3,4]
-        popMenu = CTPopoutMenu
-        
-        popMenu = [[CTPopoutMenu alloc]initWithTitle:@"Title" message:@"message" items:items];
-        popMenu.menuStyle = MenuStyleDefault , MenuStyleGrid , MenuStyleList or MenuStyleOval;//choose one from these
-        [popMenu showMenuInParentViewController:parentVC withCenter:center];
+    @IBOutlet weak var conversationMenuBtn: UIButton!
+    @IBOutlet weak var profileBtn: UIButton!
+    
+    var pickerView = AKPickerView()
+    
+    
+    var profiles = [String]()
+    var profileClickCount = 0
+    @IBAction func profileBtnClicked(sender: UIButton) {
+        pickerView.hidden = ++profileClickCount % 2 == 0
+    }
+    
+    func showProfiles(){
         
     }
     
+    func numberOfItemsInPickerView(pickerView: AKPickerView) -> Int {
+        return profiles.count
+    }
+    
+    func pickerView(pickerView: AKPickerView, imageForItem item: Int) -> UIImage {
+        let image = Helper.scaledImageToSize(UIImage(named: profiles[item])!, newSize: CGSizeMake(45, 45))
+        
+        return image
+    }
+    func pickerView(pickerView: AKPickerView, didSelectItem item: Int) {
+        println(item)
+        backgroundImage.image = UIImage(named: "background\(item+1)")
+    }
+    
+    @IBAction func conversationMenuBtnClicked(sender: UIButton) {
+        var conversations = [KxMenuItem]()
+        for i in 1...4{
+            let image = Helper.scaledImageToSize(UIImage(named: "profile\(i)")!, newSize: CGSizeMake(40, 40))
+            let menuItem = KxMenuItem("Hello, I like your style", image: image , target: self, action: nil)
+            conversations.append(menuItem)
+        }
+        
+        KxMenu.showMenuInView(self.view, fromRect: sender.frame, menuItems: conversations)
+
+        
+    }
+    
+    
     @IBAction func settingMenuBtnClicked(sender: UIButton) {
+        
+        var settings = [KxMenuItem]()
+        let menuItem = KxMenuItem("Log out", image: Helper.scaledImageToSize(UIImage(named: "logout")!, newSize: CGSizeMake(45, 45)), target: self, action: nil)
+        settings.append(menuItem    )
+        KxMenu.showMenuInView(self.view, fromRect: sender.frame, menuItems: settings)
     }
     
     override func viewDidLoad() {
@@ -51,23 +93,30 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
         clothSlot4.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
         clothSlot5.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
         clothSlot6.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
+        
+        //generate profile wheel
+        for i in 1...profileCount{
+            profiles.append("profile\(i)")
+        }
+        
+        pickerView =  AKPickerView(frame: CGRectMake(profileBtn.frame.origin.x + profileBtn.frame.width, profileBtn.frame.origin.y, 200, profileBtn.frame.height))
+        
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        pickerView.pickerViewStyle = .Wheel
+        pickerView.reloadData()
+        pickerView.hidden = true
+        pickerView.tag = 998
+        self.view.addSubview(pickerView)
+
     }
 
     var countClothMenuBtnClick=0
     @IBAction func clothMenuBtnClicked(sender: UIButton) {
         
-        let show = true
-        revealClothSlot(showed:++countClothMenuBtnClick%2 == 1)
+       //edit style
     }
-    
-    func revealClothSlot(showed show :Bool){
-        clothSlot1.hidden = show
-        clothSlot2.hidden = show
-        clothSlot3.hidden = show
-        clothSlot4.hidden = show
-        clothSlot5.hidden = show
-        clothSlot6.hidden = show
-    }
+  
     
     @IBAction func photoMenuBtnClicked(sender: UIButton) {
         var alert = UIAlertController(title: "Upload photo", message: "Choose photo source", preferredStyle: UIAlertControllerStyle.Alert)
@@ -98,7 +147,6 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
     }
    
     var countTapClick=0
-    
     @IBAction func opTapGesture(sender: UITapGestureRecognizer) {
         revealAllSubView(showed: ++countTapClick % 2 == 1)
     }
@@ -108,8 +156,13 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
 //            if view.tag != backgroundImage.tag {
 //                 view.hidden = show
 //            }
+//            if view.tag == pickerView.tag{
+//                if pickerView.hidden == false{
+//                    pickerView.hidden = true
+//                    profileClickCount = 0
+//                }
+//            }
 //        }
-//        revealClothSlot(showed:countClothMenuBtnClick%2 == 1)
     }
     
     @IBAction func onSwipeGesture(sender: UISwipeGestureRecognizer) {
@@ -117,11 +170,10 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
     }
     
     var tindex = 0
-    var tcycle = 7
     func onTapGestureFromClothSlot(gesture: UITapGestureRecognizer){
         
         if let clothSlot  = gesture.view as? UIImageView {
-            if tindex++ > tcycle-1 {
+            if tindex++ == clothCount {
                 tindex = 1
             }
             clothSlot.image = UIImage(named: "cloth\(tindex)")
@@ -169,14 +221,13 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
     }
     
     func changeUserRoomBackground(img:UIImage?){
-        
         backgroundImage.image = img
     }
     
-    var cycle = 4
+    
     var index = 0
     func nextUser() -> User{
-        if ++index > cycle-1 {
+        if ++index == backgroundCount {
             index = 0
         }
         
@@ -187,7 +238,7 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
     // sample data
     func generateSampleData(){
         
-        for i in 1...cycle{
+        for i in 1...backgroundCount{
             var user = User(name:String(i))
             user.room.background = "background\(i)"
             users.append(user)
