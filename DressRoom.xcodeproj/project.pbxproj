@@ -13,7 +13,7 @@
 		F81AE5081AF7234C0070479F /* Cloth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AE5021AF7234C0070479F /* Cloth.swift */; };
 		F81AE5091AF7234C0070479F /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AE5031AF7234C0070479F /* Conversation.swift */; };
 		F81AE50A1AF7234C0070479F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AE5041AF7234C0070479F /* Item.swift */; };
-		F81AE50B1AF7234C0070479F /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AE5051AF7234C0070479F /* Room.swift */; };
+		F81AE50B1AF7234C0070479F /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AE5051AF7234C0070479F /* Style.swift */; };
 		F81AE50C1AF7234C0070479F /* Sticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AE5061AF7234C0070479F /* Sticker.swift */; };
 		F81AE50D1AF7234C0070479F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AE5071AF7234C0070479F /* User.swift */; };
 		F81AE51D1AF735990070479F /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F81AE51C1AF735990070479F /* KxMenu.m */; };
@@ -28,6 +28,7 @@
 		F88938F11AF1FD55004B6BCC /* DressRoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88938F01AF1FD55004B6BCC /* DressRoomTests.swift */; };
 		F889390A1AF27CA0004B6BCC /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88939091AF27CA0004B6BCC /* UserViewController.swift */; };
 		F8B84B161AF7B6E50017E261 /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B84B151AF7B6E50017E261 /* AKPickerView.swift */; };
+		F8B84B1A1AF86EB00017E261 /* ConversationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B84B191AF86EB00017E261 /* ConversationTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +50,7 @@
 		F81AE5021AF7234C0070479F /* Cloth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloth.swift; sourceTree = "<group>"; };
 		F81AE5031AF7234C0070479F /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		F81AE5041AF7234C0070479F /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		F81AE5051AF7234C0070479F /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		F81AE5051AF7234C0070479F /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		F81AE5061AF7234C0070479F /* Sticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sticker.swift; sourceTree = "<group>"; };
 		F81AE5071AF7234C0070479F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F81AE51B1AF735990070479F /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KxMenu.h; path = ../KxMenu.h; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		F88938F01AF1FD55004B6BCC /* DressRoomTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DressRoomTests.swift; sourceTree = "<group>"; };
 		F88939091AF27CA0004B6BCC /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		F8B84B151AF7B6E50017E261 /* AKPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKPickerView.swift; sourceTree = "<group>"; };
+		F8B84B191AF86EB00017E261 /* ConversationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +116,7 @@
 				F81AE5021AF7234C0070479F /* Cloth.swift */,
 				F81AE5031AF7234C0070479F /* Conversation.swift */,
 				F81AE5041AF7234C0070479F /* Item.swift */,
-				F81AE5051AF7234C0070479F /* Room.swift */,
+				F81AE5051AF7234C0070479F /* Style.swift */,
 				F81AE5061AF7234C0070479F /* Sticker.swift */,
 				F81AE5071AF7234C0070479F /* User.swift */,
 			);
@@ -182,6 +184,7 @@
 				F81AE51E1AF735F40070479F /* DressRoom-Bridging-Header.h */,
 				F81AE51F1AF73CEE0070479F /* Helper.swift */,
 				040D93591AF7E09100B95B12 /* EditClothesViewController.swift */,
+				F8B84B191AF86EB00017E261 /* ConversationTableViewController.swift */,
 			);
 			path = DressRoom;
 			sourceTree = "<group>";
@@ -373,12 +376,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8B84B1A1AF86EB00017E261 /* ConversationTableViewController.swift in Sources */,
 				F81AE5261AF756130070479F /* MyMenuTableViewController.swift in Sources */,
 				040D935A1AF7E09100B95B12 /* EditClothesViewController.swift in Sources */,
 				F81AE5081AF7234C0070479F /* Cloth.swift in Sources */,
 				F81AE52B1AF75AEE0070479F /* ENSideMenu.swift in Sources */,
 				F81AE52D1AF75B2B0070479F /* ENSideMenuNavigationController.swift in Sources */,
-				F81AE50B1AF7234C0070479F /* Room.swift in Sources */,
+				F81AE50B1AF7234C0070479F /* Style.swift in Sources */,
 				F8B84B161AF7B6E50017E261 /* AKPickerView.swift in Sources */,
 				F889390A1AF27CA0004B6BCC /* UserViewController.swift in Sources */,
 				F81AE5091AF7234C0070479F /* Conversation.swift in Sources */,

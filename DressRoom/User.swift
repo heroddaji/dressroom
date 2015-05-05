@@ -10,7 +10,7 @@ import Foundation
 
 class User: Printable  {
     var name = "user"
-    var room = Room()
+    var style = Style()
     
     init(name: String){
         self.name = name

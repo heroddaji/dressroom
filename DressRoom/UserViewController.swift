@@ -14,7 +14,7 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
     var users = [User]()
     var me = User(name: "me"){
         didSet{
-            changeUserRoomBackground(UIImage(named: me.room.background))
+            changeUserRoomBackground(UIImage(named: me.style.background))
         }
     }
     
@@ -56,19 +56,26 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
     }
     func pickerView(pickerView: AKPickerView, didSelectItem item: Int) {
         println(item)
-        backgroundImage.image = UIImage(named: "background\(item+1)")
+        backgroundImage.image = UIImage(named: "style\(item+1)")
     }
     
     @IBAction func conversationMenuBtnClicked(sender: UIButton) {
         var conversations = [KxMenuItem]()
         for i in 1...4{
             let image = Helper.scaledImageToSize(UIImage(named: "profile\(i)")!, newSize: CGSizeMake(40, 40))
-            let menuItem = KxMenuItem("Hello, I like your style", image: image , target: self, action: nil)
+            let menuItem = KxMenuItem("Hello, I like your style", image: image , target: self, action: "showConversation:")
             conversations.append(menuItem)
         }
         
         KxMenu.showMenuInView(self.view, fromRect: sender.frame, menuItems: conversations)
-
+        
+    }
+    
+    func showConversation(sender: AnyObject){
+        if let knMenuItem = sender as? KxMenuItem{
+            let conversationView: ConversationTableViewController = self.storyboard?.instantiateViewControllerWithIdentifier("conversationView") as! ConversationTableViewController
+            self.navigationController?.pushViewController(conversationView, animated: true)
+        }
         
     }
     
@@ -77,7 +84,7 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
         
         var settings = [KxMenuItem]()
         let menuItem = KxMenuItem("Log out", image: Helper.scaledImageToSize(UIImage(named: "logout")!, newSize: CGSizeMake(45, 45)), target: self, action: nil)
-        settings.append(menuItem    )
+        settings.append(menuItem)
         KxMenu.showMenuInView(self.view, fromRect: sender.frame, menuItems: settings)
     }
     
@@ -166,7 +173,7 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
     }
     
     @IBAction func onSwipeGesture(sender: UISwipeGestureRecognizer) {
-        me = nextUser()
+       // me = nextUser()
     }
     
     var tindex = 0
@@ -240,7 +247,7 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
         
         for i in 1...backgroundCount{
             var user = User(name:String(i))
-            user.room.background = "background\(i)"
+            user.style.background = "style\(i)"
             users.append(user)
         }
       

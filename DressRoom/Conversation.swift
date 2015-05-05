@@ -9,4 +9,5 @@
 import Foundation
 class Conversation{
     
+    var chat = [String:String]()
 }
