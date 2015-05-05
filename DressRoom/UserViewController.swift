@@ -87,12 +87,12 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
         
         backgroundImage.tag = 999
         
-        clothSlot1.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
-        clothSlot2.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
-        clothSlot3.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
-        clothSlot4.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
-        clothSlot5.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
-        clothSlot6.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
+//        clothSlot1.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
+//        clothSlot2.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
+//        clothSlot3.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
+//        clothSlot4.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
+//        clothSlot5.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
+//        clothSlot6.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
         
         //generate profile wheel
         for i in 1...profileCount{
