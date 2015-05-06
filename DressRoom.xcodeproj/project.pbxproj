@@ -11,7 +11,6 @@
 		04982E101AF4F27A00B69538 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04982E0F1AF4F27A00B69538 /* Images.xcassets */; };
 		76A9306A91F681303B20FE96 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2E5D72AFAAFBF89BF378A6 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F81AE50D1AF7234C0070479F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AE5071AF7234C0070479F /* User.swift */; };
-		F81AE51D1AF735990070479F /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F81AE51C1AF735990070479F /* KxMenu.m */; };
 		F81AE5201AF73CEE0070479F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AE51F1AF73CEE0070479F /* Helper.swift */; };
 		F81AE5251AF756130070479F /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AE5231AF756130070479F /* MyNavigationController.swift */; };
 		F81AE5261AF756130070479F /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AE5241AF756130070479F /* MyMenuTableViewController.swift */; };
@@ -29,6 +28,7 @@
 		F8B9C13C1AFA41370030EC12 /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B9C13B1AFA41370030EC12 /* CartTableViewController.swift */; };
 		F8B9C1421AFA52E00030EC12 /* BadgeStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9C13F1AFA52E00030EC12 /* BadgeStyle.m */; };
 		F8B9C1431AFA52E00030EC12 /* CustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9C1411AFA52E00030EC12 /* CustomBadge.m */; };
+		F8B9C1461AFA645A0030EC12 /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9C1451AFA645A0030EC12 /* KxMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +48,6 @@
 		4B8FFD7D411FC22DCBC94185 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		516450AB008394D9F6D084F9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F81AE5071AF7234C0070479F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		F81AE51B1AF735990070479F /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KxMenu.h; path = ../KxMenu.h; sourceTree = "<group>"; };
-		F81AE51C1AF735990070479F /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KxMenu.m; path = ../KxMenu.m; sourceTree = "<group>"; };
 		F81AE51E1AF735F40070479F /* DressRoom-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DressRoom-Bridging-Header.h"; sourceTree = "<group>"; };
 		F81AE51F1AF73CEE0070479F /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		F81AE5231AF756130070479F /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
@@ -75,6 +73,8 @@
 		F8B9C13F1AFA52E00030EC12 /* BadgeStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeStyle.m; sourceTree = "<group>"; };
 		F8B9C1401AFA52E00030EC12 /* CustomBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBadge.h; sourceTree = "<group>"; };
 		F8B9C1411AFA52E00030EC12 /* CustomBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBadge.m; sourceTree = "<group>"; };
+		F8B9C1441AFA645A0030EC12 /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
+		F8B9C1451AFA645A0030EC12 /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +128,8 @@
 		F81AE5281AF756250070479F /* kxmenu */ = {
 			isa = PBXGroup;
 			children = (
-				F81AE51B1AF735990070479F /* KxMenu.h */,
-				F81AE51C1AF735990070479F /* KxMenu.m */,
+				F8B9C1441AFA645A0030EC12 /* KxMenu.h */,
+				F8B9C1451AFA645A0030EC12 /* KxMenu.m */,
 			);
 			name = kxmenu;
 			sourceTree = "<group>";
@@ -400,11 +400,11 @@
 				F8B84B161AF7B6E50017E261 /* AKPickerView.swift in Sources */,
 				F889390A1AF27CA0004B6BCC /* UserViewController.swift in Sources */,
 				F8B9C13A1AFA33E60030EC12 /* ClothDetailViewController.swift in Sources */,
-				F81AE51D1AF735990070479F /* KxMenu.m in Sources */,
 				F81AE50D1AF7234C0070479F /* User.swift in Sources */,
 				F8B9C1421AFA52E00030EC12 /* BadgeStyle.m in Sources */,
 				F81AE5201AF73CEE0070479F /* Helper.swift in Sources */,
 				F81AE5251AF756130070479F /* MyNavigationController.swift in Sources */,
+				F8B9C1461AFA645A0030EC12 /* KxMenu.m in Sources */,
 				F8B9C13C1AFA41370030EC12 /* CartTableViewController.swift in Sources */,
 				F88938DB1AF1FD55004B6BCC /* AppDelegate.swift in Sources */,
 			);
