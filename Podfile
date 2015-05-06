@@ -4,4 +4,4 @@ workspace 'DressRoom'
 use_frameworks!
 
 pod 'MaterialKit'
-pod 'E84PopOutMenu'
+

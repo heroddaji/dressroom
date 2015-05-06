@@ -22,6 +22,7 @@ typedef NS_ENUM(NSInteger, E84PopOutMenuDirection) {
 };
 
 @interface E84PopOutMenu : UIControl
+@property (nonatomic, strong) NSMutableDictionary *menuItemInfo;
 
 /** 
  The identifier for the currently selected item. Manually setting this will

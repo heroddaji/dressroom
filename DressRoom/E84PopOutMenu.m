@@ -10,13 +10,14 @@
 
 @interface E84PopOutMenu () < UIGestureRecognizerDelegate >
 
-@property (nonatomic, strong) NSMutableDictionary *menuItemInfo;
 
 @property (nonatomic, strong) UIView *maskView;
 
 @end
 
 @implementation E84PopOutMenu
+
+@synthesize menuItemInfo;
 
 /* */
 - (instancetype)init {
@@ -201,7 +202,7 @@
    
     _maskType = E84PopOutMenuMaskTypeNone;
     _menuDirection = E84PopOutMenuDirectionRight;
-    _menuItemInfo = [NSMutableDictionary dictionary];
+    menuItemInfo = [NSMutableDictionary dictionary];
     _open = NO;
     
     _animationDuration = 0.4;

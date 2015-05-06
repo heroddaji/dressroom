@@ -1,5 +1,5 @@
 //
-//  ConversationTableViewController.swift
+//  chatTableViewController.swift
 //  DressRoom
 //
 //  Created by daitran on 5/5/15.
@@ -11,14 +11,14 @@ import UIKit
 class ConversationTableViewController: UITableViewController {
     
     
-    var conversation = Conversation()
+    var chat = User.Style.Chat()
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        self.navigationController?.title = "Conversation"
+        self.navigationController?.title = "chat"
         
         for i in 1...5 {
-            conversation.chat["profile\(i)"] = "Hello, I like your style"
+            chat.conversation["profile\(i)"] = "Hello, I like your style"
         }
         
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -45,8 +45,8 @@ class ConversationTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        println("number of row \(conversation.chat.count)")
-        return conversation.chat.count
+        println("number of row \(chat.conversation.count)")
+        return chat.conversation.count
     }
 
     
@@ -56,10 +56,10 @@ class ConversationTableViewController: UITableViewController {
 //        var imgView: UIImageView = cell.contentView.viewWithTag(1) as! UIImageView
 //        var lbl:UILabel = cell.contentView.viewWithTag(2) as! UILabel
 //        imgView.image = UIImage(named: "profile\(indexPath.row)")
-//        lbl.text = conversation.chat["profile\(indexPath.row)"]
+//        lbl.text = chat.chat["profile\(indexPath.row)"]
         
         cell.imageView?.image = UIImage(named: "profile\(indexPath.row+1)")
-        cell.textLabel?.text =  conversation.chat["profile\(indexPath.row+1)"]
+        cell.textLabel?.text =  chat.conversation["profile\(indexPath.row+1)"]
     
        return cell
     }

@@ -1,13 +1,10 @@
 PODS:
-  - E84PopOutMenu (0.0.5)
   - MaterialKit (0.3.2)
 
 DEPENDENCIES:
-  - E84PopOutMenu
   - MaterialKit
 
 SPEC CHECKSUMS:
-  E84PopOutMenu: 15ef71be7e9c4463487ba05007c2c394b79a3d8f
   MaterialKit: dba786a24f5e5cdeb638000b899b05042dafa41c
 
 COCOAPODS: 0.36.4

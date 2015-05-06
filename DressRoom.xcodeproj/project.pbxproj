@@ -10,11 +10,6 @@
 		040D935A1AF7E09100B95B12 /* EditClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040D93591AF7E09100B95B12 /* EditClothesViewController.swift */; };
 		04982E101AF4F27A00B69538 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04982E0F1AF4F27A00B69538 /* Images.xcassets */; };
 		76A9306A91F681303B20FE96 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2E5D72AFAAFBF89BF378A6 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F81AE5081AF7234C0070479F /* Cloth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AE5021AF7234C0070479F /* Cloth.swift */; };
-		F81AE5091AF7234C0070479F /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AE5031AF7234C0070479F /* Conversation.swift */; };
-		F81AE50A1AF7234C0070479F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AE5041AF7234C0070479F /* Item.swift */; };
-		F81AE50B1AF7234C0070479F /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AE5051AF7234C0070479F /* Style.swift */; };
-		F81AE50C1AF7234C0070479F /* Sticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AE5061AF7234C0070479F /* Sticker.swift */; };
 		F81AE50D1AF7234C0070479F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AE5071AF7234C0070479F /* User.swift */; };
 		F81AE51D1AF735990070479F /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F81AE51C1AF735990070479F /* KxMenu.m */; };
 		F81AE5201AF73CEE0070479F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AE51F1AF73CEE0070479F /* Helper.swift */; };
@@ -29,6 +24,7 @@
 		F889390A1AF27CA0004B6BCC /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88939091AF27CA0004B6BCC /* UserViewController.swift */; };
 		F8B84B161AF7B6E50017E261 /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B84B151AF7B6E50017E261 /* AKPickerView.swift */; };
 		F8B84B1A1AF86EB00017E261 /* ConversationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B84B191AF86EB00017E261 /* ConversationTableViewController.swift */; };
+		F8B84B4E1AF9E4720017E261 /* E84PopOutMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B84B4D1AF9E4720017E261 /* E84PopOutMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,11 +43,6 @@
 		0D2E5D72AFAAFBF89BF378A6 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B8FFD7D411FC22DCBC94185 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		516450AB008394D9F6D084F9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		F81AE5021AF7234C0070479F /* Cloth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloth.swift; sourceTree = "<group>"; };
-		F81AE5031AF7234C0070479F /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
-		F81AE5041AF7234C0070479F /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		F81AE5051AF7234C0070479F /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		F81AE5061AF7234C0070479F /* Sticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sticker.swift; sourceTree = "<group>"; };
 		F81AE5071AF7234C0070479F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F81AE51B1AF735990070479F /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KxMenu.h; path = ../KxMenu.h; sourceTree = "<group>"; };
 		F81AE51C1AF735990070479F /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KxMenu.m; path = ../KxMenu.m; sourceTree = "<group>"; };
@@ -72,6 +63,8 @@
 		F88939091AF27CA0004B6BCC /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		F8B84B151AF7B6E50017E261 /* AKPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKPickerView.swift; sourceTree = "<group>"; };
 		F8B84B191AF86EB00017E261 /* ConversationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTableViewController.swift; sourceTree = "<group>"; };
+		F8B84B4C1AF9E4720017E261 /* E84PopOutMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = E84PopOutMenu.h; sourceTree = "<group>"; };
+		F8B84B4D1AF9E4720017E261 /* E84PopOutMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = E84PopOutMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,22 +103,10 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		F81AE50E1AF728610070479F /* models */ = {
-			isa = PBXGroup;
-			children = (
-				F81AE5021AF7234C0070479F /* Cloth.swift */,
-				F81AE5031AF7234C0070479F /* Conversation.swift */,
-				F81AE5041AF7234C0070479F /* Item.swift */,
-				F81AE5051AF7234C0070479F /* Style.swift */,
-				F81AE5061AF7234C0070479F /* Sticker.swift */,
-				F81AE5071AF7234C0070479F /* User.swift */,
-			);
-			name = models;
-			sourceTree = "<group>";
-		};
 		F81AE5271AF7561E0070479F /* extralibs */ = {
 			isa = PBXGroup;
 			children = (
+				F8B84B4B1AF9E4560017E261 /* E84PopOutMenu */,
 				F8B84B141AF7B6C80017E261 /* akpickerview */,
 				F81AE5291AF756310070479F /* ensidemenu */,
 				F81AE5281AF756250070479F /* kxmenu */,
@@ -177,14 +158,15 @@
 			isa = PBXGroup;
 			children = (
 				F81AE5271AF7561E0070479F /* extralibs */,
-				F81AE50E1AF728610070479F /* models */,
 				F88938DE1AF1FD55004B6BCC /* Main.storyboard */,
 				F88939091AF27CA0004B6BCC /* UserViewController.swift */,
-				F88938D81AF1FD55004B6BCC /* Supporting Files */,
+				F81AE5071AF7234C0070479F /* User.swift */,
 				F81AE51E1AF735F40070479F /* DressRoom-Bridging-Header.h */,
 				F81AE51F1AF73CEE0070479F /* Helper.swift */,
 				040D93591AF7E09100B95B12 /* EditClothesViewController.swift */,
 				F8B84B191AF86EB00017E261 /* ConversationTableViewController.swift */,
+				04982E0F1AF4F27A00B69538 /* Images.xcassets */,
+				F88938D81AF1FD55004B6BCC /* Supporting Files */,
 			);
 			path = DressRoom;
 			sourceTree = "<group>";
@@ -195,7 +177,6 @@
 				F88938DA1AF1FD55004B6BCC /* AppDelegate.swift */,
 				F88938E31AF1FD55004B6BCC /* LaunchScreen.xib */,
 				F88938D91AF1FD55004B6BCC /* Info.plist */,
-				04982E0F1AF4F27A00B69538 /* Images.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -223,6 +204,15 @@
 				F8B84B151AF7B6E50017E261 /* AKPickerView.swift */,
 			);
 			name = akpickerview;
+			sourceTree = "<group>";
+		};
+		F8B84B4B1AF9E4560017E261 /* E84PopOutMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F8B84B4C1AF9E4720017E261 /* E84PopOutMenu.h */,
+				F8B84B4D1AF9E4720017E261 /* E84PopOutMenu.m */,
+			);
+			name = E84PopOutMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,21 +367,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B84B1A1AF86EB00017E261 /* ConversationTableViewController.swift in Sources */,
+				F8B84B4E1AF9E4720017E261 /* E84PopOutMenu.m in Sources */,
 				F81AE5261AF756130070479F /* MyMenuTableViewController.swift in Sources */,
 				040D935A1AF7E09100B95B12 /* EditClothesViewController.swift in Sources */,
-				F81AE5081AF7234C0070479F /* Cloth.swift in Sources */,
 				F81AE52B1AF75AEE0070479F /* ENSideMenu.swift in Sources */,
 				F81AE52D1AF75B2B0070479F /* ENSideMenuNavigationController.swift in Sources */,
-				F81AE50B1AF7234C0070479F /* Style.swift in Sources */,
 				F8B84B161AF7B6E50017E261 /* AKPickerView.swift in Sources */,
 				F889390A1AF27CA0004B6BCC /* UserViewController.swift in Sources */,
-				F81AE5091AF7234C0070479F /* Conversation.swift in Sources */,
 				F81AE51D1AF735990070479F /* KxMenu.m in Sources */,
 				F81AE50D1AF7234C0070479F /* User.swift in Sources */,
-				F81AE50C1AF7234C0070479F /* Sticker.swift in Sources */,
 				F81AE5201AF73CEE0070479F /* Helper.swift in Sources */,
 				F81AE5251AF756130070479F /* MyNavigationController.swift in Sources */,
-				F81AE50A1AF7234C0070479F /* Item.swift in Sources */,
 				F88938DB1AF1FD55004B6BCC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

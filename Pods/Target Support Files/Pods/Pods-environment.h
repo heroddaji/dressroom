@@ -6,12 +6,6 @@
 // project.
 
 
-// E84PopOutMenu
-#define COCOAPODS_POD_AVAILABLE_E84PopOutMenu
-#define COCOAPODS_VERSION_MAJOR_E84PopOutMenu 0
-#define COCOAPODS_VERSION_MINOR_E84PopOutMenu 0
-#define COCOAPODS_VERSION_PATCH_E84PopOutMenu 5
-
 // MaterialKit
 #define COCOAPODS_POD_AVAILABLE_MaterialKit
 #define COCOAPODS_VERSION_MAJOR_MaterialKit 0

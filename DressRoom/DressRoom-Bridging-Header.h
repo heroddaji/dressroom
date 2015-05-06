@@ -10,5 +10,6 @@
 #define DressRoom_DressRoom_Bridging_Header_h
 
 #include "KxMenu.h"
+#include "E84PopOutMenu.h"
 
 #endif

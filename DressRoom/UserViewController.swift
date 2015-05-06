@@ -12,14 +12,14 @@ import UIKit
 class UserViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, AKPickerViewDataSource, AKPickerViewDelegate {
     
     var users = [User]()
-    var me = User(name: "me"){
+    var me = User(){
         didSet{
             changeUserRoomBackground(UIImage(named: me.style.background))
         }
     }
     
-    let profileCount = 5
-    let backgroundCount = 4
+    let profileCount = 7
+    let backgroundCount = 7
     let clothCount = 12
     
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -56,6 +56,8 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
     }
     func pickerView(pickerView: AKPickerView, didSelectItem item: Int) {
         println(item)
+        me = users[item]
+        me.style.background = "style\(item+1)"
         backgroundImage.image = UIImage(named: "style\(item+1)")
     }
     
@@ -73,7 +75,7 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
     
     func showConversation(sender: AnyObject){
         if let knMenuItem = sender as? KxMenuItem{
-            let conversationView: ConversationTableViewController = self.storyboard?.instantiateViewControllerWithIdentifier("conversationView") as! ConversationTableViewController
+            let conversationView = self.storyboard?.instantiateViewControllerWithIdentifier("conversationView") as! ConversationTableViewController
             self.navigationController?.pushViewController(conversationView, animated: true)
         }
         
@@ -241,20 +243,28 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
         return users[index]
     }
     
+    
   
     // sample data
     func generateSampleData(){
         
         for i in 1...backgroundCount{
-            var user = User(name:String(i))
+            var user = User()
+            user.profile = "profile\(i)"
             user.style.background = "style\(i)"
             users.append(user)
         }
       
-        me =  users[1]
+        me =  users[0]
         println("generate some users \(users)")
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "editClothViewController"{
+            let viewController:EditClothesViewController = segue.destinationViewController as! EditClothesViewController
+            viewController.user = me
+        }
+    }
     
     
 

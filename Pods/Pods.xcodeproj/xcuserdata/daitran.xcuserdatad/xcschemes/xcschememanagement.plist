@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-E84PopOutMenu.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-MaterialKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4FA085DF0E2DB8EAF07698D9</key>
+		<key>2FBE40B70D0DEEAF9581A10B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5E97A1EBA6607ED42A8EEC00</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D66C453B5F5C6807DDCD58C4</key>
+		<key>BA7C28A073F685C3F94169BD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

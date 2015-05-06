@@ -16,4 +16,15 @@ class Helper{
         UIGraphicsEndImageContext()
         return newImage
     }
+    
+    class func compositeImage(images:[UIImage?], size: CGSize) -> UIImage{
+        UIGraphicsBeginImageContext(size)
+        for img in images{
+            img!.drawInRect(CGRectMake(0, 0, size.width, size.height))
+        }
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
 }
