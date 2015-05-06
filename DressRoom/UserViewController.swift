@@ -23,15 +23,9 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
     let clothCount = 12
     
     @IBOutlet weak var backgroundImage: UIImageView!
-    @IBOutlet weak var clothSlot1: UIImageView!
-    @IBOutlet weak var clothSlot2: UIImageView!
-    @IBOutlet weak var clothSlot3: UIImageView!
-    @IBOutlet weak var clothSlot4: UIImageView!
-    @IBOutlet weak var clothSlot5: UIImageView!
-    @IBOutlet weak var clothSlot6: UIImageView!
     @IBOutlet weak var conversationMenuBtn: UIButton!
     @IBOutlet weak var profileBtn: UIButton!
-    
+    var chosenCloth = UIImage(named: "item01_1")
     var pickerView = AKPickerView()
     
     
@@ -39,10 +33,98 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
     var profileClickCount = 0
     @IBAction func profileBtnClicked(sender: UIButton) {
         pickerView.hidden = ++profileClickCount % 2 == 0
+    }    
+   
+    var cartItems = [UIImage?]()
+    var chosenBtn = UIButton()
+    @IBAction func btnAction(sender: UIButton) {
+        var actions = [KxMenuItem]()
+        chosenBtn = sender
+        let detailImage = Helper.scaledImageToSize(UIImage(named: "008_detail_wh")!, newSize: CGSizeMake(40, 40))
+        let detailItem = KxMenuItem("View detail", image: detailImage , target: self, action: "doClothSlotAction:")
+        actions.append(detailItem)
+        chosenCloth = sender.imageView?.image
+        
+        let cartImage = Helper.scaledImageToSize(UIImage(named: "044_cart")!, newSize: CGSizeMake(40, 40))
+        let cartItem = KxMenuItem("Add to cart", image: cartImage , target: self, action: "doClothSlotAction:")
+        actions.append(cartItem)
+        
+        KxMenu.showMenuInView(self.view, fromRect: sender.frame, menuItems: actions)
+
+    }
+  
+    
+    
+    @IBOutlet weak var clothMenuBtn: UIButton!
+    
+    @IBOutlet weak var convMenuBtn: UIButton!
+    
+    @IBOutlet weak var photoMenuBtn: UIButton!
+    @IBOutlet weak var settingMenuBtn: UIButton!
+    @IBOutlet weak var menuBtnGroup: E84PopOutMenu!
+    
+    func setupGroupMenu(){
+//        self.menuBtnGroup.interitemSpacing = 60.0;
+//        menuBtnGroup.menuDirection = E84PopOutMenuDirection.Right
+//        self.menuBtnGroup.addTarget(self, action: "menuBtnGroupClicked:", forControlEvents: UIControlEvents.ValueChanged)
+//        
+//        let menuItemBackgroundColor = self.view.backgroundColor;
+//        
+//        var menuItem = UIButton(frame: menuBtnGroup.frame)
+//        menuItem.backgroundColor = UIColor.whiteColor()
+//        menuItem.setTranslatesAutoresizingMaskIntoConstraints(false)
+//        var img = UIImage(named: "004_menu")
+//        menuItem.setImage(img, forState: UIControlState.Normal)
+//        
+//               
+//        menuBtnGroup.addPopOutMenuItem(menuItem, forIdentifier: "menu")
+//        menuBtnGroup.addPopOutMenuItem(photoMenuBtn, forIdentifier: "photo")
+//        menuBtnGroup.addPopOutMenuItem(clothMenuBtn, forIdentifier: "cloth")
+//        menuBtnGroup.addPopOutMenuItem(convMenuBtn, forIdentifier: "conv")
+//        menuBtnGroup.addPopOutMenuItem(settingMenuBtn, forIdentifier: "setting")
+       
     }
     
-    func showProfiles(){
+    func menuBtnGroupClicked(sender:AnyObject){
         
+    }
+
+    
+    @IBAction func onCartBtnClicked(sender: UIButton) {
+        let vC = self.storyboard?.instantiateViewControllerWithIdentifier("cartViewController") as! CartTableViewController
+        vC.cartItems += cartItems
+        self.navigationController?.pushViewController(vC, animated: true)
+    }
+  
+    @IBOutlet weak var cartBtn: UIButton!
+    func doClothSlotAction(sender: KxMenuItem){
+            println(sender.description)
+        if sender.title == "View detail"{
+            let vC = self.storyboard?.instantiateViewControllerWithIdentifier("clothDetailViewController") as! ClothDetailViewController
+            vC.cloth = chosenCloth
+            self.navigationController?.pushViewController(vC, animated: true)
+        }
+        
+        if sender.title == "Add to cart"{
+            cartItems.append(chosenCloth!)
+            
+            //do drop into cart animation
+            UIView.animateWithDuration(0.25, delay: 0.1, options: UIViewAnimationOptions.CurveEaseOut,
+                animations: {
+                    var itemFrame = self.cartBtn.frame
+                    itemFrame.origin.x += self.cartBtn.frame.origin.x - self.chosenBtn.frame.origin.x
+                    itemFrame.origin.y += self.cartBtn.frame.origin.y - self.chosenBtn.frame.origin.y
+                    self.cartBtn.frame = itemFrame
+                },
+                completion: {
+                    finished in println("finished")
+                }
+            )
+            
+            //add badge
+            var cartBadge = CustomBadge(string: "\(cartItems.count)")
+            cartBtn.addSubview(cartBadge)
+        }
     }
     
     func numberOfItemsInPickerView(pickerView: AKPickerView) -> Int {
@@ -93,17 +175,10 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
     override func viewDidLoad() {
         super.viewDidLoad()
         generateSampleData()
-        
+        setupGroupMenu()
         backgroundImage.tag = 999
         
-//        clothSlot1.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
-//        clothSlot2.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
-//        clothSlot3.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
-//        clothSlot4.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
-//        clothSlot5.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
-//        clothSlot6.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "onTapGestureFromClothSlot:"))
-        
-        //generate profile wheel
+        //generate profiles 
         for i in 1...profileCount{
             profiles.append("profile\(i)")
         }
@@ -264,18 +339,16 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
             let viewController:EditClothesViewController = segue.destinationViewController as! EditClothesViewController
             viewController.user = me
         }
+        if segue.identifier == "clothDetailViewController"{
+            let viewController:ClothDetailViewController = segue.destinationViewController as! ClothDetailViewController
+            viewController.cloth = chosenCloth
+        }
+        
+        
+        
     }
     
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }

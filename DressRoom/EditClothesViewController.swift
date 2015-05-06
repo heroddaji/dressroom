@@ -95,6 +95,8 @@ class EditClothesViewController: UIViewController{
             let data = NSKeyedArchiver.archivedDataWithRootObject(btn)
             var btn2:UIButton = NSKeyedUnarchiver .unarchiveObjectWithData(data) as! UIButton
             
+    
+            
             //btn2.setTitle("hello", forState: UIControlState.Normal)
 //            btn2.frame = CGRectMake(100, 100, 50, 50)
 //            btn2.setImage(btn.imageView?.image, forState: UIControlState.Normal)

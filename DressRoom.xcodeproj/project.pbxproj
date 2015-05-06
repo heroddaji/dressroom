@@ -25,6 +25,10 @@
 		F8B84B161AF7B6E50017E261 /* AKPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B84B151AF7B6E50017E261 /* AKPickerView.swift */; };
 		F8B84B1A1AF86EB00017E261 /* ConversationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B84B191AF86EB00017E261 /* ConversationTableViewController.swift */; };
 		F8B84B4E1AF9E4720017E261 /* E84PopOutMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B84B4D1AF9E4720017E261 /* E84PopOutMenu.m */; };
+		F8B9C13A1AFA33E60030EC12 /* ClothDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B9C1391AFA33E60030EC12 /* ClothDetailViewController.swift */; };
+		F8B9C13C1AFA41370030EC12 /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B9C13B1AFA41370030EC12 /* CartTableViewController.swift */; };
+		F8B9C1421AFA52E00030EC12 /* BadgeStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9C13F1AFA52E00030EC12 /* BadgeStyle.m */; };
+		F8B9C1431AFA52E00030EC12 /* CustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B9C1411AFA52E00030EC12 /* CustomBadge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,12 @@
 		F8B84B191AF86EB00017E261 /* ConversationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTableViewController.swift; sourceTree = "<group>"; };
 		F8B84B4C1AF9E4720017E261 /* E84PopOutMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = E84PopOutMenu.h; sourceTree = "<group>"; };
 		F8B84B4D1AF9E4720017E261 /* E84PopOutMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = E84PopOutMenu.m; sourceTree = "<group>"; };
+		F8B9C1391AFA33E60030EC12 /* ClothDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClothDetailViewController.swift; sourceTree = "<group>"; };
+		F8B9C13B1AFA41370030EC12 /* CartTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewController.swift; sourceTree = "<group>"; };
+		F8B9C13E1AFA52E00030EC12 /* BadgeStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgeStyle.h; sourceTree = "<group>"; };
+		F8B9C13F1AFA52E00030EC12 /* BadgeStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgeStyle.m; sourceTree = "<group>"; };
+		F8B9C1401AFA52E00030EC12 /* CustomBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBadge.h; sourceTree = "<group>"; };
+		F8B9C1411AFA52E00030EC12 /* CustomBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBadge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +116,7 @@
 		F81AE5271AF7561E0070479F /* extralibs */ = {
 			isa = PBXGroup;
 			children = (
+				F8B9C13D1AFA52CF0030EC12 /* CustomBadge */,
 				F8B84B4B1AF9E4560017E261 /* E84PopOutMenu */,
 				F8B84B141AF7B6C80017E261 /* akpickerview */,
 				F81AE5291AF756310070479F /* ensidemenu */,
@@ -165,6 +176,8 @@
 				F81AE51F1AF73CEE0070479F /* Helper.swift */,
 				040D93591AF7E09100B95B12 /* EditClothesViewController.swift */,
 				F8B84B191AF86EB00017E261 /* ConversationTableViewController.swift */,
+				F8B9C1391AFA33E60030EC12 /* ClothDetailViewController.swift */,
+				F8B9C13B1AFA41370030EC12 /* CartTableViewController.swift */,
 				04982E0F1AF4F27A00B69538 /* Images.xcassets */,
 				F88938D81AF1FD55004B6BCC /* Supporting Files */,
 			);
@@ -213,6 +226,17 @@
 				F8B84B4D1AF9E4720017E261 /* E84PopOutMenu.m */,
 			);
 			name = E84PopOutMenu;
+			sourceTree = "<group>";
+		};
+		F8B9C13D1AFA52CF0030EC12 /* CustomBadge */ = {
+			isa = PBXGroup;
+			children = (
+				F8B9C13E1AFA52E00030EC12 /* BadgeStyle.h */,
+				F8B9C13F1AFA52E00030EC12 /* BadgeStyle.m */,
+				F8B9C1401AFA52E00030EC12 /* CustomBadge.h */,
+				F8B9C1411AFA52E00030EC12 /* CustomBadge.m */,
+			);
+			name = CustomBadge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B84B1A1AF86EB00017E261 /* ConversationTableViewController.swift in Sources */,
+				F8B9C1431AFA52E00030EC12 /* CustomBadge.m in Sources */,
 				F8B84B4E1AF9E4720017E261 /* E84PopOutMenu.m in Sources */,
 				F81AE5261AF756130070479F /* MyMenuTableViewController.swift in Sources */,
 				040D935A1AF7E09100B95B12 /* EditClothesViewController.swift in Sources */,
@@ -374,10 +399,13 @@
 				F81AE52D1AF75B2B0070479F /* ENSideMenuNavigationController.swift in Sources */,
 				F8B84B161AF7B6E50017E261 /* AKPickerView.swift in Sources */,
 				F889390A1AF27CA0004B6BCC /* UserViewController.swift in Sources */,
+				F8B9C13A1AFA33E60030EC12 /* ClothDetailViewController.swift in Sources */,
 				F81AE51D1AF735990070479F /* KxMenu.m in Sources */,
 				F81AE50D1AF7234C0070479F /* User.swift in Sources */,
+				F8B9C1421AFA52E00030EC12 /* BadgeStyle.m in Sources */,
 				F81AE5201AF73CEE0070479F /* Helper.swift in Sources */,
 				F81AE5251AF756130070479F /* MyNavigationController.swift in Sources */,
+				F8B9C13C1AFA41370030EC12 /* CartTableViewController.swift in Sources */,
 				F88938DB1AF1FD55004B6BCC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 daitran. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class User {
     class Style {
@@ -28,9 +28,12 @@ class User {
         var background = "style1"
     }
     
-    
+    class Cart{
+        var items = ["item01_1"]
+    }
     
     var profile = "profile1"
     var style = Style()
+    var cart = Cart()
     
 }

@@ -11,5 +11,5 @@
 
 #include "KxMenu.h"
 #include "E84PopOutMenu.h"
-
+#include "CustomBadge.h"
 #endif

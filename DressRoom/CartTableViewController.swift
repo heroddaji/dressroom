@@ -1,32 +1,27 @@
 //
-//  chatTableViewController.swift
+//  CartTableViewController.swift
 //  DressRoom
 //
-//  Created by daitran on 5/5/15.
+//  Created by daitran on 5/6/15.
 //  Copyright (c) 2015 daitran. All rights reserved.
 //
 
 import UIKit
 
-class ConversationTableViewController: UITableViewController {
+class CartTableViewController: UITableViewController {
     
-    
-    var chat = User.Style.Chat()
+   // var cartItems = [UIImage(named: "item01_1"), UIImage(named: "item02_1"), UIImage(named: "item03_1")]
+    var cartItems = [UIImage?]()
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        self.navigationItem.title = "Conversation"
-        
-        for i in 1...5 {
-            chat.conversation["profile\(i)"] = "Hello, I like your style"
-        }
-        
+        self.navigationItem.title = "Cart"
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+
         // Uncomment the following line to preserve selection between presentations
-         self.clearsSelectionOnViewWillAppear = false
+        // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-         self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,27 +40,17 @@ class ConversationTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        println("number of row \(chat.conversation.count)")
-        return chat.conversation.count
+        return cartItems.count
     }
 
-    
+   
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
-       
-//        var imgView: UIImageView = cell.contentView.viewWithTag(1) as! UIImageView
-//        var lbl:UILabel = cell.contentView.viewWithTag(2) as! UILabel
-//        imgView.image = UIImage(named: "profile\(indexPath.row)")
-//        lbl.text = chat.chat["profile\(indexPath.row)"]
-        
-        cell.imageView?.image = UIImage(named: "profile\(indexPath.row+1)")
-        cell.textLabel?.text =  chat.conversation["profile\(indexPath.row+1)"]
-    
-       return cell
-    }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println(indexPath.row)
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+
+        cell.imageView?.image = cartItems[indexPath.row]
+        cell.textLabel?.text = "item \(indexPath.row+1)"
+
+        return cell
     }
     
 
