@@ -1,0 +1,6 @@
+framework module KxMenu {
+  umbrella header "Pods-KxMenu-umbrella.h"
+
+  export *
+  module * { export * }
+}

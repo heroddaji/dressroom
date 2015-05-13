@@ -7,7 +7,10 @@
 //
 
 import UIKit
-
+import E84PopOutMenu
+import KxMenu
+import CustomBadge
+import AKPickerView
 
 class UserViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, AKPickerViewDataSource, AKPickerViewDelegate {
     
@@ -127,8 +130,8 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
         }
     }
     
-    func numberOfItemsInPickerView(pickerView: AKPickerView) -> Int {
-        return profiles.count
+    func numberOfItemsInPickerView(pickerView: AKPickerView!) -> UInt{
+        return UInt(profiles.count)
     }
     
     func pickerView(pickerView: AKPickerView, imageForItem item: Int) -> UIImage {
@@ -187,7 +190,7 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
         
         pickerView.delegate = self
         pickerView.dataSource = self
-        pickerView.pickerViewStyle = .Wheel
+        pickerView.pickerViewStyle = .Style3D
         pickerView.reloadData()
         pickerView.hidden = true
         pickerView.tag = 998
@@ -343,8 +346,6 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
             let viewController:ClothDetailViewController = segue.destinationViewController as! ClothDetailViewController
             viewController.cloth = chosenCloth
         }
-        
-        
         
     }
     

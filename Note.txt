@@ -1,0 +1,2 @@
+- framework E84PopOutMenu has modified var menuItemInfo move from private .m file to public .h file
+- Android prototype app -> download at http://app.fashiondis.co

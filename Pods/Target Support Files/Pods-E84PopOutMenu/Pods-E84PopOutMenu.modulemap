@@ -1,0 +1,6 @@
+framework module E84PopOutMenu {
+  umbrella header "Pods-E84PopOutMenu-umbrella.h"
+
+  export *
+  module * { export * }
+}

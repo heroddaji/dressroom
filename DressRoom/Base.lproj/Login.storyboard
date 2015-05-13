@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9ZC-fF-iCQ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Landing View Controller-->
+        <scene sceneID="Jcn-nr-CLo">
+            <objects>
+                <viewController id="dYp-VZ-8RM" customClass="LandingViewController" customModule="DressRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tvd-i0-HOr"/>
+                        <viewControllerLayoutGuide type="bottom" id="myK-Nb-6pJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qch-Jq-eJC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="style1" translatesAutoresizingMaskIntoConstraints="NO" id="Fel-ot-kn4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOu-Td-AyX" customClass="MKButton" customModule="MaterialKit">
+                                <rect key="frame" x="286" y="617" width="73" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="vKu-ZG-K7e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Log in">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundLayerColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="backgroundLayerCornerRadius">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="ripplePercent">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="maskEnabled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dressRoomBtnClicked:" destination="B8b-2i-TpT" eventType="touchUpInside" id="NSa-bU-SlI"/>
+                                    <segue destination="B8b-2i-TpT" kind="show" id="hub-fu-PEA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoq-cv-KY7" customClass="MKButton" customModule="MaterialKit">
+                                <rect key="frame" x="111" y="382" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="I1q-se-A7S"/>
+                                </constraints>
+                                <state key="normal" image="fashion_scan_wh">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="styleBtnClicked:" destination="dYp-VZ-8RM" eventType="touchUpInside" id="JU8-o7-3UA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsy-aj-8X2" customClass="MKButton" customModule="MaterialKit">
+                                <rect key="frame" x="179" y="382" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="vsu-HC-eDg"/>
+                                </constraints>
+                                <state key="normal" title="Dress room" image="btn_dress_room_wh">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dressRoomBtnClicked:" destination="dYp-VZ-8RM" eventType="touchUpInside" id="8ab-af-oXE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fel-ot-kn4" firstAttribute="leading" secondItem="Qch-Jq-eJC" secondAttribute="leading" id="35l-pw-P80"/>
+                            <constraint firstItem="zOu-Td-AyX" firstAttribute="trailing" secondItem="Qch-Jq-eJC" secondAttribute="trailingMargin" id="7AF-0W-q8H"/>
+                            <constraint firstAttribute="trailing" secondItem="Fel-ot-kn4" secondAttribute="trailing" id="C60-8d-72V"/>
+                            <constraint firstItem="Fel-ot-kn4" firstAttribute="bottom" secondItem="myK-Nb-6pJ" secondAttribute="top" id="Ied-xJ-lj6"/>
+                            <constraint firstItem="hoq-cv-KY7" firstAttribute="bottom" secondItem="nsy-aj-8X2" secondAttribute="bottom" id="Lag-hi-raM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nsy-aj-8X2" secondAttribute="trailing" constant="216" id="LqW-eC-3Ln"/>
+                            <constraint firstItem="Fel-ot-kn4" firstAttribute="top" secondItem="Qch-Jq-eJC" secondAttribute="top" id="LsQ-Lj-GjJ"/>
+                            <constraint firstItem="hoq-cv-KY7" firstAttribute="leading" secondItem="Qch-Jq-eJC" secondAttribute="leadingMargin" constant="95" id="aN6-Hv-ZZp"/>
+                            <constraint firstItem="hoq-cv-KY7" firstAttribute="top" secondItem="nsy-aj-8X2" secondAttribute="top" id="bKp-YB-Z7O"/>
+                            <constraint firstItem="myK-Nb-6pJ" firstAttribute="top" secondItem="hoq-cv-KY7" secondAttribute="bottom" constant="225" id="k7A-2A-AXS"/>
+                            <constraint firstItem="hoq-cv-KY7" firstAttribute="top" secondItem="tvd-i0-HOr" secondAttribute="bottom" constant="318" id="lkI-gP-HJa"/>
+                            <constraint firstAttribute="bottom" secondItem="zOu-Td-AyX" secondAttribute="bottom" constant="20" symbolic="YES" id="mDI-QZ-kND"/>
+                            <constraint firstItem="nsy-aj-8X2" firstAttribute="leading" secondItem="hoq-cv-KY7" secondAttribute="trailing" constant="8" symbolic="YES" id="yVA-81-duZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LqW-eC-3Ln"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="3lp-wN-emk"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mjb-y8-b15" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1829" y="-155"/>
+        </scene>
+        <!--Welcome to Fashion Disco-->
+        <scene sceneID="1V6-EO-x40">
+            <objects>
+                <viewController storyboardIdentifier="loginVC" id="B8b-2i-TpT" customClass="LoginViewController" customModule="DressRoom" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5SY-Xl-sBk"/>
+                        <viewControllerLayoutGuide type="bottom" id="j1q-4c-2nT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LPt-VQ-1j8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D09-zA-vzU" userLabel="Email" customClass="MKTextField" customModule="MaterialKit">
+                                <rect key="frame" x="16" y="280" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="Email " label="Email"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vVU-oB-FIV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1x6-rl-wGy" customClass="MKTextField" customModule="MaterialKit">
+                                <rect key="frame" x="16" y="318" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ml9-TZ-Hl1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIn-dS-oWW" customClass="MKButton" customModule="MaterialKit">
+                                <rect key="frame" x="16" y="356" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="iLS-w8-lRE"/>
+                                </constraints>
+                                <state key="normal" title="LOG IN">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjp-KK-DMb" customClass="MKButton" customModule="MaterialKit">
+                                <rect key="frame" x="24" y="394" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dbd-dx-CGq"/>
+                                </constraints>
+                                <state key="normal" title="Sign Up for Fashion Disco">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1m4-u2-dSo" kind="show" id="pbM-dG-GYj"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fashion_scan_gr" translatesAutoresizingMaskIntoConstraints="NO" id="u3e-OI-Jyl">
+                                <rect key="frame" x="108" y="72" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="3bX-Ej-gNI"/>
+                                    <constraint firstAttribute="height" constant="200" id="pls-JZ-Hhn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lIn-dS-oWW" firstAttribute="trailing" secondItem="1x6-rl-wGy" secondAttribute="trailing" id="21p-aC-JHt"/>
+                            <constraint firstItem="1x6-rl-wGy" firstAttribute="leading" secondItem="D09-zA-vzU" secondAttribute="leading" id="3YM-xC-GhK"/>
+                            <constraint firstItem="D09-zA-vzU" firstAttribute="top" secondItem="u3e-OI-Jyl" secondAttribute="bottom" constant="8" symbolic="YES" id="6Jh-Ha-4tq"/>
+                            <constraint firstItem="u3e-OI-Jyl" firstAttribute="top" secondItem="5SY-Xl-sBk" secondAttribute="bottom" constant="52" id="AmW-gu-tZj"/>
+                            <constraint firstItem="lIn-dS-oWW" firstAttribute="top" secondItem="1x6-rl-wGy" secondAttribute="bottom" constant="8" symbolic="YES" id="Cgd-Zg-9Q9"/>
+                            <constraint firstItem="1x6-rl-wGy" firstAttribute="top" secondItem="D09-zA-vzU" secondAttribute="bottom" constant="8" symbolic="YES" id="Tam-fn-0ZO"/>
+                            <constraint firstItem="u3e-OI-Jyl" firstAttribute="centerX" secondItem="D09-zA-vzU" secondAttribute="centerX" id="V4z-FY-01b"/>
+                            <constraint firstItem="1x6-rl-wGy" firstAttribute="leading" secondItem="LPt-VQ-1j8" secondAttribute="leadingMargin" id="bMy-CP-xn2"/>
+                            <constraint firstItem="u3e-OI-Jyl" firstAttribute="centerX" secondItem="LPt-VQ-1j8" secondAttribute="centerX" id="dzL-es-KPk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fjp-KK-DMb" secondAttribute="trailing" constant="-8" id="itU-sY-Ku1"/>
+                            <constraint firstItem="fjp-KK-DMb" firstAttribute="leading" secondItem="LPt-VQ-1j8" secondAttribute="leadingMargin" constant="8" id="n0Q-Ub-ngI"/>
+                            <constraint firstItem="fjp-KK-DMb" firstAttribute="top" secondItem="lIn-dS-oWW" secondAttribute="bottom" constant="8" symbolic="YES" id="sJZ-3D-gSg"/>
+                            <constraint firstItem="1x6-rl-wGy" firstAttribute="leading" secondItem="lIn-dS-oWW" secondAttribute="leading" id="ve7-sG-7SL"/>
+                            <constraint firstItem="1x6-rl-wGy" firstAttribute="trailing" secondItem="D09-zA-vzU" secondAttribute="trailing" id="wdh-4y-LDE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome to Fashion Disco" id="bkP-Mj-edm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WFB-nk-JCj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2531" y="-145"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="vn1-nf-qNX">
+            <objects>
+                <viewController storyboardIdentifier="signupVC" id="1m4-u2-dSo" customClass="SignUpViewController" customModule="DressRoom" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qPj-hP-euC"/>
+                        <viewControllerLayoutGuide type="bottom" id="U2q-LD-fPE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Slx-5Z-RrQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YYF-wv-8Mg" userLabel="Email" customClass="MKTextField" customModule="MaterialKit">
+                                <rect key="frame" x="16" y="330" width="343" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="Email " label="Email"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xis-V2-B2z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UaU-Sr-Idu" customClass="MKTextField" customModule="MaterialKit">
+                                <rect key="frame" x="16" y="368" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9ma-An-muk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yY-c7-Z9D" customClass="MKButton" customModule="MaterialKit">
+                                <rect key="frame" x="16" y="406" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eax-Ra-XSo"/>
+                                </constraints>
+                                <state key="normal" title="SIGN UP">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fashion_scan_gr" translatesAutoresizingMaskIntoConstraints="NO" id="NVv-0z-8Rp">
+                                <rect key="frame" x="33" y="28" width="350" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="5gf-aM-ui1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5yY-c7-Z9D" firstAttribute="top" secondItem="UaU-Sr-Idu" secondAttribute="bottom" constant="8" symbolic="YES" id="1a0-MM-XaN"/>
+                            <constraint firstItem="YYF-wv-8Mg" firstAttribute="top" secondItem="NVv-0z-8Rp" secondAttribute="bottom" constant="45" id="8Zi-at-F5S"/>
+                            <constraint firstItem="U2q-LD-fPE" firstAttribute="top" secondItem="5yY-c7-Z9D" secondAttribute="bottom" constant="231" id="FS4-Cj-sVj"/>
+                            <constraint firstItem="5yY-c7-Z9D" firstAttribute="leading" secondItem="Slx-5Z-RrQ" secondAttribute="leadingMargin" id="GZg-Xm-rj9"/>
+                            <constraint firstItem="UaU-Sr-Idu" firstAttribute="leading" secondItem="YYF-wv-8Mg" secondAttribute="leading" id="Nlg-yP-NLy"/>
+                            <constraint firstItem="NVv-0z-8Rp" firstAttribute="centerX" secondItem="YYF-wv-8Mg" secondAttribute="centerX" id="R04-p1-9GN"/>
+                            <constraint firstItem="UaU-Sr-Idu" firstAttribute="leading" secondItem="5yY-c7-Z9D" secondAttribute="leading" id="Z3u-1P-uTn"/>
+                            <constraint firstItem="5yY-c7-Z9D" firstAttribute="trailing" secondItem="UaU-Sr-Idu" secondAttribute="trailing" id="bXO-UH-bob"/>
+                            <constraint firstItem="5yY-c7-Z9D" firstAttribute="trailing" secondItem="Slx-5Z-RrQ" secondAttribute="trailingMargin" id="dZ0-QM-dlX"/>
+                            <constraint firstItem="UaU-Sr-Idu" firstAttribute="top" secondItem="YYF-wv-8Mg" secondAttribute="bottom" constant="8" symbolic="YES" id="g82-jQ-S3w"/>
+                            <constraint firstItem="NVv-0z-8Rp" firstAttribute="top" secondItem="qPj-hP-euC" secondAttribute="bottom" constant="8" symbolic="YES" id="wOO-bx-VDV"/>
+                            <constraint firstItem="YYF-wv-8Mg" firstAttribute="trailing" secondItem="UaU-Sr-Idu" secondAttribute="trailing" id="xsD-eE-Uje"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FEO-ZT-4ep" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3268" y="-155"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CWE-0L-Opr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9ZC-fF-iCQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a0F-fT-MUu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dYp-VZ-8RM" kind="relationship" relationship="rootViewController" id="a2L-2s-JlE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KYa-wq-YN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1017" y="-155"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_dress_room_wh" width="84" height="84"/>
+        <image name="fashion_scan_gr" width="86" height="86"/>
+        <image name="fashion_scan_wh" width="84" height="84"/>
+        <image name="style1" width="400" height="677"/>
+    </resources>
+</document>

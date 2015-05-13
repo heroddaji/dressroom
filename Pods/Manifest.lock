@@ -1,10 +1,22 @@
 PODS:
+  - AKPickerView (0.2.4)
+  - CustomBadge (3.0.0)
+  - E84PopOutMenu (0.0.5)
+  - KxMenu (1)
   - MaterialKit (0.3.2)
 
 DEPENDENCIES:
+  - AKPickerView
+  - CustomBadge
+  - E84PopOutMenu
+  - KxMenu
   - MaterialKit
 
 SPEC CHECKSUMS:
+  AKPickerView: 839064418c8774f17ed18e85418919708a266916
+  CustomBadge: c60738d213e7ef019b0bf1caa7948333f280ea9b
+  E84PopOutMenu: 15ef71be7e9c4463487ba05007c2c394b79a3d8f
+  KxMenu: c025365712f55fa99feb7830fbb7dea0e912be72
   MaterialKit: dba786a24f5e5cdeb638000b899b05042dafa41c
 
-COCOAPODS: 0.36.4
+COCOAPODS: 0.37.1

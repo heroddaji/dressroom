@@ -1,0 +1,48 @@
+
+/* Class = "UINavigationItem"; title = "Dress Room"; ObjectID = "4oV-Os-WVp"; */
+"4oV-Os-WVp.title" = "Dress Room";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "7aa-YX-Q7g"; */
+"7aa-YX-Q7g.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "S73-5j-exs"; */
+"S73-5j-exs.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "UVH-LQ-FNT"; */
+"UVH-LQ-FNT.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "X2i-tm-Ij2"; */
+"X2i-tm-Ij2.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "fDU-dc-61L"; */
+"fDU-dc-61L.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "k3l-Mo-roZ"; */
+"k3l-Mo-roZ.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mkI-H0-8qY"; */
+"mkI-H0-8qY.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "pm0-PZ-7sB"; */
+"pm0-PZ-7sB.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "qtO-4U-o8O"; */
+"qtO-4U-o8O.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "sLE-Mm-wM2"; */
+"sLE-Mm-wM2.normalTitle" = "Button";
+
+/* Class = "UISegmentedControl"; w0j-pS-hcA.segmentTitles[0] = "Start"; ObjectID = "w0j-pS-hcA"; */
+"w0j-pS-hcA.segmentTitles[0]" = "Start";
+
+/* Class = "UISegmentedControl"; w0j-pS-hcA.segmentTitles[1] = "Items"; ObjectID = "w0j-pS-hcA"; */
+"w0j-pS-hcA.segmentTitles[1]" = "Items";
+
+/* Class = "UILabel"; text = "label"; ObjectID = "x0Z-Oc-wPo"; */
+"x0Z-Oc-wPo.text" = "label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xch-dw-3AQ"; */
+"xch-dw-3AQ.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xpe-YF-gxU"; */
+"xpe-YF-gxU.normalTitle" = "Button";

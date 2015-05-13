@@ -6,7 +6,8 @@
 //  Copyright (c) 2015 daitran. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import E84PopOutMenu
 
 class EditClothesViewController: UIViewController{
     
