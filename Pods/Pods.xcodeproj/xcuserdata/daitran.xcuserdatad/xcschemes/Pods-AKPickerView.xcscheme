@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52C8635CB2F388B4C193911A"
+               BlueprintIdentifier = "F3CE9401F011EDD462D21AFF"
                BuildableName = "AKPickerView.framework"
                BlueprintName = "Pods-AKPickerView"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,6 +39,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "F3CE9401F011EDD462D21AFF"
+            BuildableName = "AKPickerView.framework"
+            BlueprintName = "Pods-AKPickerView"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

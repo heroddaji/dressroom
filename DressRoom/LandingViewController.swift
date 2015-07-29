@@ -7,19 +7,18 @@
 //
 
 import UIKit
-import MaterialKit
 
 class LandingViewController: UIViewController {
     
     //MARK: IBAction and IBOutlet
     
-    @IBAction func dressRoomBtnClicked(sender: MKButton) {
+    @IBAction func dressRoomBtnClicked(sender: UIButton) {
         var storyboard = UIStoryboard(name: StoryboardName.DressRoom.rawValue, bundle: nil)
         var viewController = storyboard.instantiateInitialViewController() as! UIViewController
         self.presentViewController(viewController, animated: true, completion: nil)
     }
     
-    @IBAction func styleBtnClicked(sender: MKButton) {
+    @IBAction func styleBtnClicked(sender: UIButton) {
     }
     
     

@@ -52,12 +52,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'CustomBadge.framework'
   install_framework 'E84PopOutMenu.framework'
   install_framework 'KxMenu.framework'
-  install_framework 'MaterialKit.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'AKPickerView.framework'
   install_framework 'CustomBadge.framework'
   install_framework 'E84PopOutMenu.framework'
   install_framework 'KxMenu.framework'
-  install_framework 'MaterialKit.framework'
 fi

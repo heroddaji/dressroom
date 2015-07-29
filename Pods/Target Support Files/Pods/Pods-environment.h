@@ -30,9 +30,3 @@
 #define COCOAPODS_VERSION_MINOR_KxMenu 0
 #define COCOAPODS_VERSION_PATCH_KxMenu 0
 
-// MaterialKit
-#define COCOAPODS_POD_AVAILABLE_MaterialKit
-#define COCOAPODS_VERSION_MAJOR_MaterialKit 0
-#define COCOAPODS_VERSION_MINOR_MaterialKit 3
-#define COCOAPODS_VERSION_PATCH_MaterialKit 2
-

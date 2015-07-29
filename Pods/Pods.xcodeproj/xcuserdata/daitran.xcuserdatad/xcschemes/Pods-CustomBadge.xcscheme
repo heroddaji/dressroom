@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "803CB1D09B9331673EA42B0D"
+               BlueprintIdentifier = "B2D635ACE30491E5B00D4E2F"
                BuildableName = "CustomBadge.framework"
                BlueprintName = "Pods-CustomBadge"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,6 +39,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B2D635ACE30491E5B00D4E2F"
+            BuildableName = "CustomBadge.framework"
+            BlueprintName = "Pods-CustomBadge"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

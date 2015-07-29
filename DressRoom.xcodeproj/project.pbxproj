@@ -10,7 +10,6 @@
 		76A9306A91F681303B20FE96 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2E5D72AFAAFBF89BF378A6 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F8262C911B01E7BB00F66869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8262B5E1B01E7BA00F66869 /* AppDelegate.swift */; };
 		F8262C9B1B01E7BB00F66869 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8262B6F1B01E7BA00F66869 /* Images.xcassets */; };
-		F8262C9C1B01E7BB00F66869 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8262B701B01E7BA00F66869 /* Info.plist */; };
 		F8262CA51B01E7BB00F66869 /* item01_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8262B811B01E7BA00F66869 /* item01_1.jpg */; };
 		F8262CA61B01E7BB00F66869 /* item01_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8262B821B01E7BA00F66869 /* item01_2.jpg */; };
 		F8262CA71B01E7BB00F66869 /* item01_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F8262B831B01E7BA00F66869 /* item01_3.jpg */; };
@@ -582,7 +581,6 @@
 		F8262C8D1B01E7BB00F66869 /* style5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = style5.jpg; sourceTree = "<group>"; };
 		F8262C8E1B01E7BB00F66869 /* style6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = style6.jpg; sourceTree = "<group>"; };
 		F8262C8F1B01E7BB00F66869 /* style7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = style7.jpg; sourceTree = "<group>"; };
-		F8262DAF1B02174000F66869 /* Note.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Note.txt; sourceTree = "<group>"; };
 		F8262DB01B02185E00F66869 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F8262DB11B02185E00F66869 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Room.strings; sourceTree = "<group>"; };
 		F8262DB21B02186400F66869 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -1039,7 +1037,6 @@
 		F88938CC1AF1FD55004B6BCC = {
 			isa = PBXGroup;
 			children = (
-				F8262DAF1B02174000F66869 /* Note.txt */,
 				F8262B5D1B01E7BA00F66869 /* DressRoom */,
 				F88938ED1AF1FD55004B6BCC /* DressRoomTests */,
 				F88938D61AF1FD55004B6BCC /* Products */,
@@ -1122,7 +1119,7 @@
 		F88938CD1AF1FD55004B6BCC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = daitran;
 				TargetAttributes = {
 					F88938D41AF1FD55004B6BCC = {
@@ -1306,7 +1303,6 @@
 				F8262D311B01E7BB00F66869 /* 025_style_ranking.png in Resources */,
 				F8262CD71B01E7BB00F66869 /* 002-02-02_cm_off.png in Resources */,
 				F8262CC71B01E7BB00F66869 /* 001-01_s_facebook.png in Resources */,
-				F8262C9C1B01E7BB00F66869 /* Info.plist in Resources */,
 				F8262CE91B01E7BB00F66869 /* 002-02_text_box_03.png in Resources */,
 				F8262D661B01E7BB00F66869 /* 046_plus_white_box.png in Resources */,
 				F8262D171B01E7BB00F66869 /* 008_style_want.png in Resources */,
@@ -1622,7 +1618,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1661,7 +1657,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1676,6 +1672,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DressRoom/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -1690,6 +1687,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DressRoom/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";

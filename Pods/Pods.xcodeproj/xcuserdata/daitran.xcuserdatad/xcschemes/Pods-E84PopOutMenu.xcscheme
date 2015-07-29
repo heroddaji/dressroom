@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "77576396A089AFD8AB996A0C"
+               BlueprintIdentifier = "1724D877FD5E8E8270F17030"
                BuildableName = "E84PopOutMenu.framework"
                BlueprintName = "Pods-E84PopOutMenu"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -39,6 +39,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1724D877FD5E8E8270F17030"
+            BuildableName = "E84PopOutMenu.framework"
+            BlueprintName = "Pods-E84PopOutMenu"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
